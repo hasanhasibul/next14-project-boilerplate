@@ -10,7 +10,7 @@ const AddPost = () => {
 		msg: '',
 	});
 	const [isDisabled, setIsDisabled] = useState(true);
-
+	const femo = 'ddddd';
 	const handleOnChange = (e: any) => {
 		let info = { ...user };
 		info[e.target.name] = e.target.value;
