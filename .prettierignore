@@ -7,3 +7,11 @@ coverage
 *.html
 .gitignore
 .prettierignore
+
+node_modules
+.next
+yarn.lock
+public 
+coverage
+.gitkeep
+*.hbs
