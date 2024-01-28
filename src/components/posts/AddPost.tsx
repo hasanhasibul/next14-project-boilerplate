@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -12,7 +13,7 @@ const AddPost = () => {
 
 	const [isDisabled, setIsDisabled] = useState(true);
 	const handleOnChange = (e: any) => {
-		let info = { ...user };
+		const info = { ...user };
 		info[e.target.name] = e.target.value;
 		setUser(info);
 	};
@@ -32,6 +33,7 @@ const AddPost = () => {
 			msg: 'submited success',
 		});
 	};
+
 	return (
 		<div className="p-8">
 			<form action="">

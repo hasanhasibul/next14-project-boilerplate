@@ -77,5 +77,8 @@ module.exports = {
 				allow: ['warn', 'error'],
 			},
 		],
+		'prefer-const': 'error',
+		'no-unused-vars': 'error',
+		'no-unused-expressions': 'error',
 	},
 };

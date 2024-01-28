@@ -1,4 +1,0 @@
-{
-	"*.{ts,tsx}": ["yarn lint"],
-	"*.{ts, tsx, css, scss}": ["yarn format"]
-}
