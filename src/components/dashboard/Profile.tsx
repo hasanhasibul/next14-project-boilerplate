@@ -8,6 +8,7 @@ interface props {
 }
 
 const Profile: FC<props> = ({ name, email, isVerified, phone }) => {
+	const hello = ' hi';
 	return (
 		<div>
 			<h1>
