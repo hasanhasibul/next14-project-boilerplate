@@ -23,14 +23,9 @@ const AddPost = () => {
 		} else {
 			setIsDisabled(true);
 		}
-
-
-
 	}, [user]);
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
-
-
 
 		setUser({
 			...user,
@@ -54,11 +49,6 @@ const AddPost = () => {
 				<label htmlFor="email">Email : </label>
 				<input
 					name="email"
-
-
-
-
-					
 					id="email"
 					value={user.email}
 					onChange={(e: any) => handleOnChange(e)}

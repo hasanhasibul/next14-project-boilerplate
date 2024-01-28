@@ -6,11 +6,17 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
 		"test": "vitest",
 		"coverage": "vitest run --coverage",
-		"prepare": "husky"
+		"prepare": "husky",
+		"lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+		"lint:fix": "eslint . --fix",
+		"prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+		"prettier:fix": "prettier --write .",
+		"lint:prettier:check": "yarn lint:check && yarn prettier:check"
+	},
+	"lint-staged": {
+		"src/**/*.ts": "yarn lint:prettier:check"
 	},
 	"dependencies": {
 		"next": "14.1.0",
