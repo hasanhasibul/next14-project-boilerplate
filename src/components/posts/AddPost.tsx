@@ -9,8 +9,8 @@ const AddPost = () => {
 		email: '',
 		msg: '',
 	});
+
 	const [isDisabled, setIsDisabled] = useState(true);
-	const femo = 'ddddd';
 	const handleOnChange = (e: any) => {
 		let info = { ...user };
 		info[e.target.name] = e.target.value;
@@ -26,7 +26,6 @@ const AddPost = () => {
 	}, [user]);
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
-		console.log('form submitting ....', user);
 		setUser({
 			...user,
 			msg: 'submited success',
