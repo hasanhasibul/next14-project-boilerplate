@@ -9,13 +9,16 @@
 		"test": "vitest",
 		"coverage": "vitest run --coverage",
 		"prepare": "husky",
-		"lint:check": "eslint --ignore-path .eslintignore --ext .js,.jsx,.tsx,.ts .",
-		"lint:fix": "eslint --fix",
-		"prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsxjson)\"",
-		"lint-prettier": "yarn lint:check && yarn prettier:check"
+		"prettier:format": "prettier --write .",
+		"prettier:check": "prettier --check \"**/*.{ts,tsx,json}\"",
+		"lint": "next lint",
+		"eslint:format": "eslint src --fix"
 	},
 	"lint-staged": {
-		"src/**/*.tsx": "yarn lint-prettier"
+		"src/**/*": [
+			"yarn prettier:format",
+			"yarn eslint:format"
+		]
 	},
 	"dependencies": {
 		"next": "14.1.0",
